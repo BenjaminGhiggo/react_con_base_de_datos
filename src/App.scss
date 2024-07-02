@@ -1,0 +1,82 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.App{
+  // hacemos que el contendor sea flexible
+  // los distribuira en una linea vertical cuando se usa en <div>
+  // 
+  display: flex;
+
+  //con esto hacemos se sea flexible en una columna
+  flex-direction: column;
+  // que ocupe toda la vita
+  min-height: 100vh;
+  
+  // agregar un espacio de 20px alrededor del contenedor
+  padding: 20px;
+
+  nav {
+    // los distribuira en una linea horizontal cuando se usa en <nav>
+    display: flex;
+    // añadimso un espacio de 10px entre elementos flexibles
+    gap:10px;
+  }
+  ul{
+    // los distribuira en una linea horizontal cuando se usa en <ul>
+    display: flex;
+  
+    // flex-wrap: wrap; permite que los elementos flexibles se desplacen en varias filas cuando no caben en una sola fila. ulti para ser responsivo
+    flex-wrap: wrap;
+  
+    gap: 20px;
+  
+    // list-style se utiliza para eliminar estilos predeterminadors coo puntos u otrso cuando se usa ul o ol
+    list-style: none;
+  }
+  ul li {
+    // convertira a cada elemento de la lista en un contenedor flexbox
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
