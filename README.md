@@ -1,5 +1,9 @@
 # React con conexion a base de datos
 
+para poder visualizar el proyecto desde cualquiere otro dispositivo usando la misma conexion a intenert a traves de wifi o datos móviles.
+
+npm run dev -- --host 
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
